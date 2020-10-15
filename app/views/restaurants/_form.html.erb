@@ -1,0 +1,11 @@
+
+<%= simple_form_for (@restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :category %>
+  <% if @restaurant.new_record? %>
+    <%= f.submit "Add a new restaurant" %>
+  <% else %>
+    <%= f.submit "Update a restaurant" %>
+  <% end %>
+<% end %>
